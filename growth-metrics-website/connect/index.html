@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Growth Metrics Solutions — Growth Metrics Solutions</title>
+<meta name="description" content="Save contact, WhatsApp and connect with Growth Metrics Solutions — websites, Amazon / Flipkart / Meesho management and Meta ads.">
+<meta property="og:title" content="Growth Metrics Solutions — Growth Metrics Solutions">
+<meta property="og:description" content="Websites · Marketplaces · Meta Ads. Tap to save contact or WhatsApp.">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:#0A0A0A;color:#fff;font-family:Manrope,system-ui,sans-serif;display:flex;justify-content:center;padding:24px 16px 40px;overflow-x:hidden}
+.orb{position:fixed;border-radius:999px;filter:blur(80px);pointer-events:none;z-index:0}
+.o1{width:420px;height:420px;background:rgba(124,58,237,.35);top:-140px;left:50%;margin-left:-210px;animation:drift 16s ease-in-out infinite}
+.o2{width:300px;height:300px;background:rgba(249,115,22,.14);bottom:-80px;right:-80px;animation:drift 20s ease-in-out infinite reverse}
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(40px,30px)}}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes ring{0%{transform:scale(.9);opacity:.8}100%{transform:scale(1.25);opacity:0}}
+.card{position:relative;z-index:1;width:100%;max-width:440px;display:flex;flex-direction:column;gap:16px}
+.rv{opacity:0;animation:rise .7s cubic-bezier(.2,.8,.2,1) forwards}
+.top{background:rgba(20,20,20,.85);border:1px solid rgba(255,255,255,.08);border-radius:28px;padding:22px 22px 26px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;backdrop-filter:blur(8px)}
+.brand{align-self:stretch;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.brand img{height:30px}
+.brand span{font-size:11px;font-weight:700;letter-spacing:.14em;color:#A78BFA;border:1px solid rgba(139,92,246,.35);background:rgba(124,58,237,.12);padding:6px 10px;border-radius:999px}
+.av{position:relative;width:124px;height:124px;margin-top:8px}
+.av::before{content:"";position:absolute;inset:-6px;border-radius:999px;border:2px solid #8B5CF6;animation:ring 2.6s ease-out infinite}
+.av img{width:124px;height:124px;border-radius:999px;object-fit:cover;border:3px solid #7C3AED;background:#7C3AED;display:block}
+.av img.ph{object-fit:contain;padding:22px}
+h1{margin:6px 0 0;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:30px;letter-spacing:-.02em;line-height:1.1}
+.role{margin:0;font-size:15px;color:#A1A1AA}.role span{color:#FB923C;font-weight:600}
+.tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:4px}
+.tags span{font-size:12.5px;font-weight:600;color:#C4B5FD;background:rgba(124,58,237,.14);border:1px solid rgba(139,92,246,.3);padding:6px 11px;border-radius:999px}
+.cta{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;border-radius:18px;font-weight:700;font-size:16px;text-decoration:none;border:0;cursor:pointer;font-family:inherit;transition:transform .2s,box-shadow .2s}
+.btn:active{transform:scale(.97)}
+.save{background:#7C3AED;color:#fff;box-shadow:0 10px 30px rgba(124,58,237,.45)}
+.wa{background:#25D366;color:#06210F}
+.tiles{display:flex;flex-direction:column;gap:10px}
+.tile{display:flex;align-items:center;gap:14px;padding:14px 16px;min-height:64px;background:rgba(20,20,20,.85);border:1px solid rgba(255,255,255,.08);border-radius:18px;color:#fff;text-decoration:none;transition:transform .2s,border-color .2s}
+.tile:hover{transform:translateY(-2px);border-color:rgba(139,92,246,.5)}
+.ti{width:42px;height:42px;flex:0 0 42px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:rgba(124,58,237,.16);color:#C4B5FD}
+.tt{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}.tt b{font-size:15px}.tt small{font-size:13px;color:#A1A1AA;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ar{color:#71717A;font-size:18px}
+.qr{background:#fff;color:#0A0A0A;border-radius:28px;padding:22px;display:flex;align-items:center;gap:18px}
+.qr img{width:132px;height:132px;flex:0 0 132px;display:block}
+.qr h2{margin:0 0 6px;font-family:"Bricolage Grotesque",sans-serif;font-size:21px;font-weight:800}
+.qr p{margin:0 0 12px;font-size:13.5px;line-height:1.5;color:#52525B}
+.share{background:#0A0A0A;color:#fff;min-height:44px;font-size:14px;padding:0 16px;border-radius:12px}
+.foot{text-align:center;font-size:12.5px;color:#71717A;margin-top:6px}.foot a{color:#A78BFA;text-decoration:none}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#fff;color:#0A0A0A;font-weight:700;font-size:14px;padding:12px 18px;border-radius:12px;opacity:0;transition:opacity .3s;z-index:9}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}.rv{opacity:1}}
+</style>
+</head>
+<body>
+<div class="orb o1" aria-hidden="true"></div><div class="orb o2" aria-hidden="true"></div>
+<main class="card">
+<section class="top rv" style="animation-delay:.05s">
+<div class="brand"><a href="/" aria-label="Growth Metrics Solutions website"><img src="/connect/logo-full.png" alt="Growth Metrics Solutions" style="height:44px"></a><span>DIGITAL CARD</span></div>
+<div class="av"><img class="ph" src="/connect/logo-tree.png" alt=""></div>
+<h1>Growth Metrics Solutions</h1><p class="role">Digital Growth Agency</p>
+<div class="tags"><span>Websites</span><span>Amazon · Flipkart · Meesho</span><span>Meta Ads</span></div>
+</section>
+<div class="cta rv" style="animation-delay:.15s">
+<a class="btn save" href="/connect/contact.vcf" download="Growth-Metrics-Solutions.vcf"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>Save Contact</a>
+<a class="btn wa" href="https://wa.me/918318490298?text=Hi%2C%20I%20got%20your%20card%20%E2%80%94%20I%27d%20like%20to%20know%20more%20about%20your%20services" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>WhatsApp</a>
+</div>
+<div class="tiles"><a class="tile rv" href="tel:+918318490298"><span class="ti"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span class="tt"><b>Call</b><small>+91 83184 90298</small></span><span class="ar">↗</span></a><a class="tile rv" href="https://growthmetricssolutions.com" target="_blank" rel="noopener"><span class="ti"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></span><span class="tt"><b>Website</b><small>growthmetricssolutions.com</small></span><span class="ar">↗</span></a></div>
+<section class="qr rv" style="animation-delay:.35s">
+<img src="/connect/qr.png" alt="QR code for growthmetricssolutions.com/connect">
+<div><h2>Scan to connect</h2><p>Show this to anyone — they scan, save your contact and WhatsApp you in seconds.</p>
+<button class="btn share" type="button" id="share"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>Share card</button></div>
+</section>
+<p class="foot">© 2026 Growth Metrics Solutions · <a href="/">growthmetricssolutions.com</a></p>
+</main>
+<div class="toast" id="toast" role="status">Link copied</div>
+<script>
+document.querySelectorAll('.tiles .tile').forEach(function(t,i){t.style.animationDelay=(0.22+i*0.06)+'s'});
+document.getElementById('share').addEventListener('click',function(){
+var u='https://growthmetricssolutions.com/connect',d={title:document.title,text:'Save my contact — Growth Metrics Solutions',url:u};
+if(navigator.share){navigator.share(d).catch(function(){});return;}
+var t=document.getElementById('toast');
+(navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).then(function(){t.textContent='Link copied';},function(){t.textContent=u;}).then(function(){t.style.opacity=1;setTimeout(function(){t.style.opacity=0},2200);});
+});
+</script>
+</body>
+</html>
