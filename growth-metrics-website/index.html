@@ -566,13 +566,17 @@ a{color:#8B5CF6}a:hover{color:#A78BFA}
 <span style="display: flex; flex-direction: column;"><span style="font-weight: 800; font-size: 16px;">Email Us</span><span style="font-size: 13px; color: #A1A1AA;">growthmetricssoulutions@gmail.com</span></span>
 </a>
 </div>
-<form style="flex: 1 1 460px; background: #F8F9FA; border: 1px solid #E4E4E7; border-radius: 24px; padding: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+<form id="gm-form" novalidate="" style="flex: 1 1 460px; background: #F8F9FA; border: 1px solid #E4E4E7; border-radius: 24px; padding: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
 <h3 style="grid-column: 1 / -1; margin: 0 0 4px; font-family: 'Bricolage Grotesque', sans-serif; font-size: 20px; font-weight: 700;">Or leave us a message</h3>
-<div style="display: flex; flex-direction: column; gap: 8px;"><label for="a-name" style="font-size: 13px; font-weight: 600; color: #3F3F46;">Full Name</label><input id="a-name" type="text" placeholder="Full Name" style="font: inherit; font-size: 15px; padding: 14px; border: 1px solid #E4E4E7; border-radius: 12px; background: #FFFFFF; color: #0A0A0A;"></div>
-<div style="display: flex; flex-direction: column; gap: 8px;"><label for="a-email" style="font-size: 13px; font-weight: 600; color: #3F3F46;">Email Address</label><input id="a-email" type="email" placeholder="Email Address" style="font: inherit; font-size: 15px; padding: 14px; border: 1px solid #E4E4E7; border-radius: 12px; background: #FFFFFF; color: #0A0A0A;"></div>
-<div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px;"><label for="a-biz" style="font-size: 13px; font-weight: 600; color: #3F3F46;">Business Name / Store Link</label><input id="a-biz" type="text" placeholder="Business name or Amazon / Flipkart / Meesho link" style="font: inherit; font-size: 15px; padding: 14px; border: 1px solid #E4E4E7; border-radius: 12px; background: #FFFFFF; color: #0A0A0A;"></div>
-<div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px;"><label for="a-msg" style="font-size: 13px; font-weight: 600; color: #3F3F46;">How can we help?</label><textarea id="a-msg" rows="4" placeholder="Tell us about your business and goals..." style="font: inherit; font-size: 15px; padding: 14px; border: 1px solid #E4E4E7; border-radius: 12px; background: #FFFFFF; color: #0A0A0A; resize: vertical;"></textarea></div>
-<button type="button" style="grid-column: 1 / -1; font: inherit; font-size: 16px; font-weight: 700; background: #7C3AED; color: #FFFFFF; border: none; border-radius: 12px; padding: 17px; cursor: pointer; box-shadow: 0 8px 24px rgba(124,58,237,0.35);">Send Message →</button>
+<div style="display: flex; flex-direction: column; gap: 8px;"><label for="a-name" style="font-size: 13px; font-weight: 600; color: #3F3F46;">Full Name</label><input id="a-name" name="name" type="text" autocomplete="name" required="" placeholder="Full Name" style="font: inherit; font-size: 15px; padding: 14px; border: 1px solid #E4E4E7; border-radius: 12px; background: #FFFFFF; color: #0A0A0A;"></div>
+<div style="display: flex; flex-direction: column; gap: 8px;"><label for="a-email" style="font-size: 13px; font-weight: 600; color: #3F3F46;">Email Address</label><input id="a-email" name="email" type="email" autocomplete="email" placeholder="Email Address" style="font: inherit; font-size: 15px; padding: 14px; border: 1px solid #E4E4E7; border-radius: 12px; background: #FFFFFF; color: #0A0A0A;"></div>
+<div style="display: flex; flex-direction: column; gap: 8px;"><label for="a-phone" style="font-size: 13px; font-weight: 600; color: #3F3F46;">WhatsApp Number</label><input id="a-phone" name="phone" type="tel" autocomplete="tel" placeholder="+91" style="font: inherit; font-size: 15px; padding: 14px; border: 1px solid #E4E4E7; border-radius: 12px; background: #FFFFFF; color: #0A0A0A;"></div>
+<div style="display: flex; flex-direction: column; gap: 8px;"><label for="a-biz" style="font-size: 13px; font-weight: 600; color: #3F3F46;">Business Name / Store Link</label><input id="a-biz" name="business" type="text" placeholder="Business name or store link" style="font: inherit; font-size: 15px; padding: 14px; border: 1px solid #E4E4E7; border-radius: 12px; background: #FFFFFF; color: #0A0A0A;"></div>
+<div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px;"><label for="a-msg" style="font-size: 13px; font-weight: 600; color: #3F3F46;">How can we help?</label><textarea id="a-msg" name="message" rows="4" required="" placeholder="Tell us about your business and goals..." style="font: inherit; font-size: 15px; padding: 14px; border: 1px solid #E4E4E7; border-radius: 12px; background: #FFFFFF; color: #0A0A0A; resize: vertical;"></textarea></div>
+<input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display: none;">
+<button id="gm-send" type="submit" style="grid-column: 1 / -1; font: inherit; font-size: 16px; font-weight: 700; background: #7C3AED; color: #FFFFFF; border: none; border-radius: 12px; padding: 17px; cursor: pointer; box-shadow: 0 8px 24px rgba(124,58,237,0.35);">Send Message →</button>
+<button id="gm-wa" type="button" style="grid-column: 1 / -1; font: inherit; font-size: 15px; font-weight: 700; background: #FFFFFF; color: #128C7E; border: 1.5px solid #25D366; border-radius: 12px; padding: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px;">Send on WhatsApp instead</button>
+<p id="gm-status" role="status" aria-live="polite" style="grid-column: 1 / -1; margin: 0; font-size: 14px; font-weight: 600; min-height: 20px;"></p>
 </form>
 </div>
 </section>
@@ -733,6 +737,34 @@ function frame(ts){
 size();addEventListener('resize',size);
 if(matchMedia('(pointer:fine)').matches){addEventListener('pointermove',function(e){if(cx<-900){cx=e.clientX;cy=e.clientY;}mx=e.clientX;my=e.clientY;});}
 requestAnimationFrame(frame);
+})();
+</script>
+<script>
+(function(){
+var KEY='WEB3FORMS_ACCESS_KEY';
+var f=document.getElementById('gm-form'); if(!f) return;
+var st=document.getElementById('gm-status'), send=document.getElementById('gm-send'), wa=document.getElementById('gm-wa');
+function v(n){var e=f.elements[n];return e?e.value.trim():'';}
+function say(t,ok){st.textContent=t;st.style.color=ok?'#15803D':'#B91C1C';}
+function check(){if(!v('name')){say('Please enter your name.');f.elements.name.focus();return false;}
+ if(!v('email')&&!v('phone')){say('Please add your email or WhatsApp number so we can reply.');f.elements.email.focus();return false;}
+ if(v('email')&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v('email'))){say('Please enter a valid email address.');f.elements.email.focus();return false;}
+ if(!v('message')){say('Please tell us how we can help.');f.elements.message.focus();return false;}return true;}
+function waText(){return 'Hi Growth Metrics Solutions,\n\nName: '+v('name')+(v('email')?'\nEmail: '+v('email'):'')+(v('phone')?'\nWhatsApp: '+v('phone'):'')+(v('business')?'\nBusiness: '+v('business'):'')+'\n\n'+v('message');}
+function openWA(){window.location.href='https://wa.me/918318490298?text='+encodeURIComponent(waText());}
+wa.addEventListener('click',function(){if(check())openWA();});
+f.addEventListener('submit',function(e){e.preventDefault();if(!check())return;
+ if(f.elements.botcheck&&f.elements.botcheck.checked)return;
+ if(KEY.indexOf('WEB3FORMS')===0){say('Opening WhatsApp to send your message…',true);openWA();return;}
+ send.disabled=true;send.textContent='Sending…';say('');
+ fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
+  body:JSON.stringify({access_key:KEY,subject:'New website enquiry — '+v('name'),from_name:'Growth Metrics Website',name:v('name'),email:v('email')||'no-email@growthmetricssolutions.com',phone:v('phone'),business:v('business'),message:v('message'),replyto:v('email')})})
+ .then(function(r){return r.json();}).then(function(d){
+  if(d.success){f.reset();say('Thank you! Your message has reached us — we\'ll reply within one working day. For a faster reply, tap "Send on WhatsApp".',true);}
+  else{say('Could not send right now — please use "Send on WhatsApp" below.');}
+ }).catch(function(){say('Could not send right now — please use "Send on WhatsApp" below.');})
+ .then(function(){send.disabled=false;send.textContent='Send Message →';});
+});
 })();
 </script>
 </body>
