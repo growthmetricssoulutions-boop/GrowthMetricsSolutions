@@ -98,7 +98,7 @@ a{color:#8B5CF6}a:hover{color:#A78BFA}
 </div>
 </div>
 
-<div aria-hidden="true" style="flex: 1 1 420px; min-width: 0; position: relative; height: 380px;">
+<div aria-hidden="true" class="gm-hcards" style="flex: 1 1 420px; min-width: 0; position: relative; height: 380px;">
 <div class="gm-f1" style="position: absolute; left: 0; top: 10px; width: 220px; background: #141414; border: 1px solid rgba(139,92,246,0.35); border-radius: 20px; padding: 22px; transform: rotate(-4deg); box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 40px rgba(124,58,237,0.12); display: flex; flex-direction: column; gap: 6px;">
 <span style="font-size: 10.5px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45);">Turnover generated</span>
 <span style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 36px; font-weight: 800; letter-spacing: -0.02em;">₹1 Cr+</span>
@@ -767,5 +767,54 @@ f.addEventListener('submit',function(e){e.preventDefault();if(!check())return;
 });
 })();
 </script>
+<!--gm-mobile-->
+<style>
+.gm-burger,.gm-mcta{display:none}
+@media (max-width:920px){
+  header nav{display:none!important}
+  header > div > a[href*="wa.me"],header .nav > a.btn{display:none!important}
+  header > div,header .nav{flex-wrap:nowrap!important;padding:10px 18px!important}
+  header a[aria-label*="home"] img{height:44px!important}
+  .gm-burger{display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:14px;background:rgba(124,58,237,.16);border:1px solid rgba(139,92,246,.4);cursor:pointer;padding:0;flex:0 0 auto}
+  .gm-burger i{position:relative;display:block;width:20px;height:2px;border-radius:2px;background:#fff;transition:background .2s}
+  .gm-burger i:before,.gm-burger i:after{content:"";position:absolute;left:0;width:20px;height:2px;border-radius:2px;background:#fff;transition:transform .25s,top .25s}
+  .gm-burger i:before{top:-6px}.gm-burger i:after{top:6px}
+  header.gm-open .gm-burger i{background:transparent}
+  header.gm-open .gm-burger i:before{top:0;transform:rotate(45deg)}
+  header.gm-open .gm-burger i:after{top:0;transform:rotate(-45deg)}
+  header.gm-open nav{display:flex!important;flex-direction:column!important;flex-wrap:nowrap!important;align-items:stretch!important;gap:0!important;position:fixed;left:0;right:0;top:var(--gm-hh,66px);bottom:0;overflow:auto;background:#0A0A0A;padding:12px 22px 28px;animation:gmMenuIn .25s ease both;z-index:40}
+  header.gm-open nav > a,header.gm-open nav > div > button{font-size:20px!important;font-weight:700!important;color:#fff!important;padding:18px 2px!important;border-bottom:1px solid rgba(255,255,255,.08)!important;width:100%;justify-content:space-between;text-align:left}
+  header.gm-open nav > div{position:static!important}
+  header.gm-open nav > div > div{position:static!important;width:auto!important;margin:8px 0!important}
+  header.gm-open nav a[aria-current]{color:#A78BFA!important;border-bottom-color:rgba(255,255,255,.08)!important}
+  header.gm-open .gm-mcta{display:flex;justify-content:center;margin-top:24px;background:linear-gradient(90deg,#7C3AED,#8B5CF6);color:#fff!important;font-weight:800;font-size:17px;padding:17px;border-radius:999px;text-decoration:none;border:0!important;box-shadow:0 10px 32px rgba(124,58,237,.45)}
+  body.gm-lock{overflow:hidden}
+  body.gm-lock .gm-wa,body.gm-lock .wa-float{display:none!important}
+  @keyframes gmMenuIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+}
+@media (max-width:700px){
+  #home{padding:44px 20px 64px!important}
+  .gm-hcards{height:auto!important;display:grid!important;grid-template-columns:1fr 1fr;gap:12px;flex-basis:100%!important}
+  .gm-hcards > div{position:static!important;width:auto!important;transform:none!important;animation:none!important;padding:18px!important;border-radius:18px!important}
+  .gm-hcards > .gm-f3{grid-column:1/-1}
+  .gm-hcards > .gm-f1 span:nth-child(2){font-size:30px!important}
+  .gm-hcards > .gm-f2{gap:8px!important}
+  .gm-hcards > .gm-f2 span[style*="padding: 6px"]{font-size:12px!important;padding:5px 10px!important}
+  .gm-hcards > .gm-f3 > div{gap:8px!important}
+}
+</style>
+<script>
+(function(){
+var h=document.querySelector('header');if(!h)return;var nav=h.querySelector('nav');if(!nav)return;
+var row=nav.parentNode;var b=document.createElement('button');b.type='button';b.className='gm-burger';b.setAttribute('aria-label','Open menu');b.setAttribute('aria-expanded','false');b.innerHTML='<i></i>';row.appendChild(b);
+var cta=row.querySelector(':scope > a[href*="wa.me"]');if(cta){var c=cta.cloneNode(true);c.className='gm-mcta';c.removeAttribute('style');c.textContent='Free Growth Audit →';nav.appendChild(c);}
+function setH(){document.documentElement.style.setProperty('--gm-hh',h.getBoundingClientRect().height+'px');}
+function close(){h.classList.remove('gm-open');document.body.classList.remove('gm-lock');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Open menu');}
+b.addEventListener('click',function(e){e.stopPropagation();setH();var o=!h.classList.contains('gm-open');if(!o)return close();h.classList.add('gm-open');document.body.classList.add('gm-lock');b.setAttribute('aria-expanded','true');b.setAttribute('aria-label','Close menu');});
+nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close);});
+window.addEventListener('resize',function(){if(innerWidth>920)close();});
+})();
+</script>
+<!--/gm-mobile-->
 </body>
 </html>
