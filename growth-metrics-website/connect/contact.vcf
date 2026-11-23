@@ -1,9 +1,13 @@
 BEGIN:VCARD
 VERSION:3.0
-N:;;;;
-FN:Growth Metrics Solutions
+N:Anas Khan;Mohd;;;
+FN:Mohd Anas Khan
 ORG:Growth Metrics Solutions
+TITLE:Founder
 TEL;TYPE=CELL,VOICE:+918318490298
+EMAIL;TYPE=WORK,INTERNET:growthmetricssoulutions@gmail.com
 URL:https://growthmetricssolutions.com
+X-SOCIALPROFILE;TYPE=instagram:https://www.instagram.com/growth_metrics_solutions/
+ADR;TYPE=WORK:;;;Kanpur / New Delhi;;;India
 NOTE:Websites · Amazon / Flipkart / Meesho management · Meta Ads
 END:VCARD
