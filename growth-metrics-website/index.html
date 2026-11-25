@@ -755,7 +755,7 @@ requestAnimationFrame(frame);
 </script>
 <script>
 (function(){
-var KEY='WEB3FORMS_ACCESS_KEY';
+var KEY='bfc91630-82e2-4e28-bca7-86957b9fe0a1';
 var f=document.getElementById('gm-form'); if(!f) return;
 var st=document.getElementById('gm-status'), send=document.getElementById('gm-send'), wa=document.getElementById('gm-wa');
 function v(n){var e=f.elements[n];return e?e.value.trim():'';}
@@ -774,9 +774,10 @@ f.addEventListener('submit',function(e){e.preventDefault();if(!check())return;
  fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
   body:JSON.stringify({access_key:KEY,subject:'New website enquiry — '+v('name'),from_name:'Growth Metrics Website',name:v('name'),email:v('email')||'no-email@growthmetricssolutions.com',phone:v('phone'),business:v('business'),message:v('message'),replyto:v('email')})})
  .then(function(r){return r.json();}).then(function(d){
-  if(d.success){f.reset();say('Thank you! Your message has reached us — we\'ll reply within one working day. For a faster reply, tap "Send on WhatsApp".',true);}
-  else{say('Could not send right now — please use "Send on WhatsApp" below.');}
- }).catch(function(){say('Could not send right now — please use "Send on WhatsApp" below.');})
+  var wt=waText();
+  if(d.success){f.reset();say('Thank you! Your message has reached us. Opening WhatsApp so we can reply faster…',true);setTimeout(function(){window.location.href='https://wa.me/918318490298?text='+encodeURIComponent(wt);},1400);}
+  else{say('Opening WhatsApp to send your message…',true);openWA();}
+ }).catch(function(){say('Opening WhatsApp to send your message…',true);openWA();})
  .then(function(){send.disabled=false;send.textContent='Send Message →';});
 });
 })();
