@@ -304,6 +304,10 @@ requestAnimationFrame(frame);
 <!--gm-mobile-->
 <style>
 .gm-burger,.gm-mcta{display:none}
+.gm-svc{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.gm-svc:before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:linear-gradient(90deg,#F97316,#8B5CF6);opacity:0;transition:opacity .25s}
+.gm-svc:hover{transform:translateY(-6px);border-color:#C4B5FD!important;box-shadow:0 18px 40px rgba(124,58,237,.14)}
+.gm-svc:hover:before{opacity:1}
 @media (max-width:920px){
   header nav{display:none!important}
   header > div > a[href*="wa.me"],header .nav > a.btn{display:none!important}
